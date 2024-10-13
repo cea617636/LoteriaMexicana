@@ -29,6 +29,7 @@ import androidx.navigation.NavController
 import mx.delasalle.loteriamexicana.R
 import java.util.Random
 
+//Se agregan cambios a estos archivos para corroborar visibilidad en gitlab remoto
 
 @Composable
 fun SecondScreen (innerPadding: Dp, navController: NavController){
