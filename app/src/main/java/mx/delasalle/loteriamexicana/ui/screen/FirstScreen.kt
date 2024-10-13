@@ -12,13 +12,21 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import mx.delasalle.loteriamexicana.R
 
-//@Preview(showBackground = true)
+@Preview(showBackground = true)
+@Composable
+fun PrevFirstScreen(){
+    val context = LocalContext.current
+    FirstScreen(innerPadding = 16.dp, navController = NavController(context = context))
+}
 @Composable
 fun FirstScreen(innerPadding: Dp, navController: NavController){
 //

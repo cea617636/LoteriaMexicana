@@ -23,6 +23,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -31,6 +32,12 @@ import java.util.Random
 
 //Se agregan cambios a estos archivos para corroborar visibilidad en gitlab remoto
 
+@Preview(showBackground = true)
+@Composable
+fun PrevSecondScreen(){
+    val context = LocalContext.current
+    SecondScreen(innerPadding = 16.dp, navController = NavController(context = context))
+}
 @Composable
 fun SecondScreen (innerPadding: Dp, navController: NavController){
     val imageList: List<String> = (1..30).map { "img_${it}i" }
